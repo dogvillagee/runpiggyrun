@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://yyksu65i6a2c"]
+
+[ext_resource type="PackedScene" uid="uid://d4fbjr2o2stox" path="res://scenes/Fast_Run.tscn" id="1_0h33l"]
+[ext_resource type="Script" path="res://scenes/fast_run.gd" id="2_qj82t"]
+[ext_resource type="PackedScene" uid="uid://buxc68rdn6s4a" path="res://scenes/terrain_controller.tscn" id="4_33hoh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d5fxu"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_48eho"]
+sky_material = SubResource("ProceduralSkyMaterial_d5fxu")
+
+[sub_resource type="Environment" id="Environment_47j6k"]
+background_mode = 2
+sky = SubResource("Sky_48eho")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_47j6k")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Fast_run" parent="." instance=ExtResource("1_0h33l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0353635, 0.112823, 0.0105615)
+script = ExtResource("2_qj82t")
+
+[node name="Camera3D" type="Camera3D" parent="Fast_run"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0.85, -2.2)
+fov = 65.0
+
+[node name="TerrainController" parent="." instance=ExtResource("4_33hoh")]
