@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://yyksu65i6a2c"]
 
 [ext_resource type="PackedScene" uid="uid://d4fbjr2o2stox" path="res://scenes/Fast_Run.tscn" id="1_0h33l"]
-[ext_resource type="Script" path="res://scenes/fast_run.gd" id="2_qj82t"]
+[ext_resource type="Script" path="res://scripts/fast_run.gd" id="2_qj82t"]
 [ext_resource type="PackedScene" uid="uid://buxc68rdn6s4a" path="res://scenes/terrain_controller.tscn" id="4_33hoh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d5fxu"]

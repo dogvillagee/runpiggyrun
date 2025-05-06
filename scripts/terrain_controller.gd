@@ -4,14 +4,14 @@ class_name TerrainController
 var TerrainBlocks: Array = []
 var terrain_belt: Array[Node3D] = []
 
-@export var terrain_velocity: float = 10.0
-@export var num_terrain_blocks: int = 8
+@export var terrain_velocity: float = 10 #speed terrain moves
+@export var num_terrain_blocks: int = 8 #total amount of terrain blocks
 @export_dir var terrian_blocks_path: String = "res://scenes/terrain_blocks"
 
 func _ready() -> void:
 	_load_terrain_scenes(terrian_blocks_path)
 	if TerrainBlocks.is_empty():
-		push_error("No terrain blocks loaded! Check directory or file structure.")
+		push_error("No terrain blocks loaded.")
 		return
 	_init_blocks(num_terrain_blocks)
 
@@ -33,7 +33,7 @@ func _init_blocks(number_of_blocks: int) -> void:
 
 func _progress_terrain(delta: float) -> void:
 	for block in terrain_belt:
-		block.position.z -= terrain_velocity * delta  # Move backward
+		block.position.z -= terrain_velocity * delta  #terrain  moves backwards
 
 	if terrain_belt.size() == 0:
 		return
@@ -41,7 +41,7 @@ func _progress_terrain(delta: float) -> void:
 	var first_block = terrain_belt[0]
 	var mesh_size_z = _get_block_length(first_block)
 
-	# Recycle the block if it's far behind
+	#Clear block when behind
 	if first_block.position.z <= -mesh_size_z:
 		var last_terrain = terrain_belt[-1]
 		var first_terrain = terrain_belt.pop_front()

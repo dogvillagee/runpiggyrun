@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cii2vwv03vuw0" path="res://assets/objects/LowPolyAssets/LowPolyAssets/Tree01.FBX" id="4_0qoaq"]
 [ext_resource type="PackedScene" uid="uid://75njyjlit3k0" path="res://assets/objects/LowPolyAssets/LowPolyAssets/Tree02.FBX" id="5_6f373"]
 [ext_resource type="PackedScene" uid="uid://bhdwtw2fb8vuh" path="res://assets/objects/LowPolyAssets/LowPolyAssets/Tree03.FBX" id="6_xalec"]
-[ext_resource type="PackedScene" uid="uid://dnvep1t4cgp7g" path="res://assets/objects/LowPoly Environment Pack/Plant_1.fbx" id="7_en11e"]
+[ext_resource type="PackedScene" uid="uid://bv3ajveicujs1" path="res://assets/objects/LowPolyAssets/LowPolyAssets/RockWall.FBX" id="8_f15tl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hwl66"]
 size = Vector3(0.593857, 0.203056, 1.99854)
@@ -59,7 +59,7 @@ shape = SubResource("BoxShape3D_rsr3q")
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 22.544, -0.185459, -0.107737)
 
 [node name="Terrain_3" parent="." instance=ExtResource("3_nbid2")]
-transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, -22.4668, -0.129915, -0.241122)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, -22.3301, -0.220452, -0.241122)
 
 [node name="Trees" type="Node3D" parent="."]
 
@@ -70,7 +70,7 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 24.4872, 1.98451, 36.5156)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 40.7463, 1.48339, 43.8426)
 
 [node name="Tree03" parent="Trees" instance=ExtResource("6_xalec")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 28.2701, 1.65954, 40.0509)
+transform = Transform3D(5.66422, 0, 0, 0, 5.66422, 0, 0, 0, 5.66422, 62.7926, 1.81318, 42.6371)
 
 [node name="Tree04" parent="Trees" instance=ExtResource("6_xalec")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 4.08252, 2.61504, 41.5505)
@@ -99,37 +99,8 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.51456, 2.28916, 37.9505)
 [node name="Tree12" parent="Trees" instance=ExtResource("4_0qoaq")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 13.906, 1.29817, 30.4082)
 
-[node name="Plants" type="Node3D" parent="."]
+[node name="RockWall" parent="." instance=ExtResource("8_f15tl")]
+transform = Transform3D(0.182656, 0, 2.05426, 0.304755, 22.9274, -0.00013682, -28.9082, 0.241705, 0.0129784, -25.8744, 9.46944, 104.003)
 
-[node name="Plant_1" parent="Plants" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.60106, 0.0947249, 1.88027)
-
-[node name="Plant_2" parent="Plants" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85267, 1.11657, 2.08732)
-
-[node name="Plant_2" parent="Plants/Plant_2" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.66482, -0.123248, -5.4324)
-
-[node name="Plant_2" parent="Plants/Plant_2/Plant_2" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.31227, -0.219075, 5.34743)
-
-[node name="Plant_2" parent="Plants/Plant_2/Plant_2/Plant_2" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6677, 0.154644, 3.10458)
-
-[node name="Plant_3" parent="Plants" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.64313, -0.0133713, -3.74525)
-
-[node name="Plant_4" parent="Plants" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1021, 0.605404, -6.33146)
-
-[node name="Plant_5" parent="Plants" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0506, 0.726824, -2.11195)
-
-[node name="Plant_5" parent="Plants/Plant_5" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.1791, -0.676194, 0.219047)
-
-[node name="Plant_5" parent="Plants/Plant_5/Plant_5" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3236, -1.60632, 5.19105)
-
-[node name="Plant_5" parent="Plants/Plant_5/Plant_5/Plant_5" instance=ExtResource("7_en11e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5568, 3.1411, -1.7018)
+[node name="RockWall2" parent="." instance=ExtResource("8_f15tl")]
+transform = Transform3D(0.432883, -0.00514625, -2.05407, 0.304755, 22.9274, -0.00013682, 28.9055, -0.24165, 0.0307628, 24.9022, 9.46944, -101.968)
